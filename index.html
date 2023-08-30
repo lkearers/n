@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background: url(https://wallpaperaccess.com/full/2835352.jpg);
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: green;
+      font-family: 'Roboto', sans-serif;
+
+    }
+    .box {
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 20px;
+      background: rgba(0,0,0,0.5);
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="box" style="backdrop-filter: blur(20px);">
+  <h1>FLASH BTC TRANSACTION (Core Network) Full Version 7.0.0</h1>
+  
+  <div class="box">
+    <h2>Transaction Details</h2>
+    <form>
+      <label for="wallet">Your Wallet:</label>
+      <input type="text" id="wallet" name="wallet" required><br><br>
+      <label for="payTo">Pay To:</label>
+      <input type="text" id="payTo" name="payTo" required><br><br>
+      <label for="amount">Amount (BTC):</label>
+      <input type="number" id="amount" name="amount" step="0.00000001" required><br><br>
+      <button type="submit">Create Transaction</button>
+    </form>
+    <p id="transactionStatus"></p>
+  </div>
+
+  <div class="box">
+    <h2>Computer Info</h2>
+    <p><strong>Timestamp:</strong> Clock Error</p>
+    <p><strong>Operating System:</strong> Microsoft Windows 10 Professional</p>
+    <p><strong>System Architecture:</strong> 64-bit</p>
+    <p><strong>Processor:</strong> Intel Core i7-10700K @ 3.80GHz</p>
+    <p><strong>Physical Memory (RAM):</strong> 16 GB</p>
+    <p><strong>Virtual Memory:</strong> 1.5 GB</p>
+    <p><strong>Storage Drive:</strong> 512 GB SSD (Free: 267 GB)</p>
+    <p><strong>Graphics Card:</strong> NVIDIA GeForce RTX 3080</p>
+    <p><strong>Monitor Resolution:</strong> 2560 x 1440</p>
+    <p><strong>Network Connection:</strong> Wired Ethernet (1 Gbps)</p>
+    <p><strong>Min Delay:</strong> 5 minutes</p>
+    <p><strong>Max Delay:</strong> 30 minutes</p>
+    <p><strong>Proxy:</strong> Not using proxy</p>
+    <p><strong>OS Version:</strong> 10.0.19043 Build 19043</p>
+</div>
+
+
+  <script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const wallet = document.getElementById('wallet').value;
+      const payTo = document.getElementById('payTo').value;
+      const amount = parseFloat(document.getElementById('amount').value);
+
+      // Simulate transaction process with increased delays
+      const transactionStatus = document.getElementById('transactionStatus');
+      transactionStatus.innerHTML = `Sending ${amount} BTC to ${payTo}...<br>`;
+      
+     setTimeout(() => {
+        transactionStatus.innerHTML += `Verifying wallet and recipient information...<br>`;
+        
+        setTimeout(() => {
+          transactionStatus.innerHTML += `Preparing to send ${amount} BTC from ${wallet} to ${payTo}...<br>`;
+          
+          setTimeout(() => {
+            transactionStatus.innerHTML += `Encrypting transaction details for security...<br>`;
+            
+            setTimeout(() => {
+              transactionStatus.innerHTML += `Submitting the encrypted transaction to the blockchain network...<br>`;
+              
+              setTimeout(() => {
+                transactionStatus.innerHTML += `Transaction sent! Awaiting network confirmation...<br>`;
+                
+                setTimeout(() => {
+                  transactionStatus.innerHTML += `Transaction confirmed on multiple nodes...<br>`;
+                  
+                  setTimeout(() => {
+                    transactionStatus.innerHTML += `Verifying recipient's address ownership...<br>`;
+                    
+                    setTimeout(() => {
+                      transactionStatus.innerHTML += `Processing transaction fee and incentives...<br>`;
+                      
+                      setTimeout(() => {
+                        transactionStatus.innerHTML += `Finalizing transaction details...<br>`;
+                        
+                        setTimeout(() => {
+                          transactionStatus.innerHTML += `[SUCCESS] BTC Flash Transaction completed!<br>`;
+                          transactionStatus.innerHTML += `[INFO] Transaction details:<br>`;
+                          transactionStatus.innerHTML += `- Sender: ${wallet}<br>`;
+                          transactionStatus.innerHTML += `- Receiver: ${payTo}<br>`;
+                          transactionStatus.innerHTML += `- Amount: ${amount} BTC<br>`;
+                          transactionStatus.innerHTML += `- Confirmation Time: 12 minutes<br>`;
+                          transactionStatus.innerHTML += `[INFO] Blockchain Network: Core Network 7.0.0<br>`;
+                        }, 50000); // Simulate finalizing details
+                      }, 30000); // Simulate processing transaction fee
+                    }, 30000); // Simulate verifying recipient's address
+                  }, 40000); // Simulate verifying transaction on nodes
+                }, 40000); // Simulate confirming transaction on network
+              }, 50000); // Simulate submitting transaction to blockchain
+            }, 30000); // Simulate encrypting transaction details
+          }, 30000); // Simulate preparing to send transaction
+        }, 30000); // Simulate verifying wallet and recipient information
+      }, 50000); // Simulate initiating transaction
+    });
+  </script>
+  </div>
+</body>
+</html>
